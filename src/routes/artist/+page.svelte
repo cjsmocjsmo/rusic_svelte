@@ -16,23 +16,29 @@
     <ul class="alphaList">
         <a href="/artist/A">
             <h1>A</h1>
+            <h3>15</h3>
         </a>
         <a href="/artist/B">
             <h1>B</h1>
+            <h3>20</h3>
         </a>
         <a href="/artist/C">
             <h1>C</h1>
+            <h3>22</h3>
         </a>
         <a href="/artist/D">
             <h1>D</h1>
+            <h3>100</h3>
         </a>
         <a href="/artist/E">
             <h1>E</h1>
+            <h3>22</h3>
         </a>
     </ul>
     <ul class="alphaList">
         <a href="/artist/F">
             <h1>F</h1>
+            <h3>22</h3>
         </a>
         <a href="/artist/G">
             <h1>G</h1>
@@ -106,6 +112,9 @@
 </div>
 
 <style>
+    h3 {
+        color: rgb(241, 7, 7);
+    }
     a {
         color: black;
     }
