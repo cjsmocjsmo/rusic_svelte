@@ -1,5 +1,6 @@
 <script>
-
+    import AddEmptyPlaylist from "../../lib/components/addEmptyPlaylist.svelte";
+    import AddRandomPlaylist from "../../lib/components/addRandomPlaylist.svelte";
 
 </script>
 
@@ -8,4 +9,5 @@
 	<meta name="description" content="Rusic PlayLists" />
 </svelte:head>
 
-<h1>playlist page</h1>
+<AddEmptyPlaylist />
+<AddRandomPlaylist />

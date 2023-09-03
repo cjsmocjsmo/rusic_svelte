@@ -19,92 +19,92 @@
 <AlbumSearchForm />
 <div>
     <ul class="alphaList">
-        <a href="/artist/A">
+        <a href="/album/A">
             <h1>A</h1>
         </a>
-        <a href="/artist/B">
+        <a href="/album/B">
             <h1>B</h1>
         </a>
-        <a href="/artist/C">
+        <a href="/album/C">
             <h1>C</h1>
         </a>
-        <a href="/artist/D">
+        <a href="/album/D">
             <h1>D</h1>
         </a>
-        <a href="/artist/E">
+        <a href="/album/E">
             <h1>E</h1>
         </a>
     </ul>
     <ul class="alphaList">
-        <a href="/artist/F">
+        <a href="/album/F">
             <h1>F</h1>
         </a>
-        <a href="/artist/G">
+        <a href="/album/G">
             <h1>G</h1>
         </a>
-        <a href="/artist/H">
+        <a href="/album/H">
             <h1>H</h1>
         </a>
-        <a href="/artist/I">
+        <a href="/album/I">
             <h1>I</h1>
         </a>
-        <a href="/artist/J">
+        <a href="/album/J">
             <h1>J</h1>
         </a>
     </ul>
     <ul class="alphaList">
-        <a href="/artist/K">
+        <a href="/album/K">
             <h1>K</h1>
         </a>
-        <a href="/artist/L">
+        <a href="/album/L">
             <h1>L</h1>
         </a>
-        <a href="/artist/M">
+        <a href="/album/M">
             <h1>M</h1>
         </a>
-        <a href="/artist/N">
+        <a href="/album/N">
             <h1>N</h1>
         </a>
-        <a href="/artist/O">
+        <a href="/album/O">
             <h1>O</h1>
         </a>
     </ul>
     <ul class="alphaList">
-        <a href="/artist/P">
+        <a href="/album/P">
             <h1>P</h1>
         </a>
-        <a href="/artist/Q">
+        <a href="/album/Q">
             <h1>Q</h1>
         </a>
-        <a href="/artist/R">
+        <a href="/album/R">
             <h1>R</h1>
         </a>
-        <a href="/artist/S">
+        <a href="/album/S">
             <h1>S</h1>
         </a>
-        <a href="/artist/T">
+        <a href="/album/T">
             <h1>T</h1>
         </a>
     </ul>
     <ul class="alphaList">
-        <a href="/artist/U">
+        <a href="/album/U">
             <h1>U</h1>
         </a>
-        <a href="/artist/V">
+        <a href="/album/V">
             <h1>V</h1>
         </a>
-        <a href="/artist/W">
+        <a href="/album/W">
             <h1>W</h1>
         </a>
-        <a href="/artist/X">
+        <a href="/album/X">
             <h1>X</h1>
         </a>
-        <a href="/artist/Y">
+        <a href="/album/Y">
             <h1>Y</h1>
         </a>
     </ul>
     <ul class="alphaList">
-        <a href="/artist/Z">
+        <a href="/album/Z">
             <h1>Z</h1>
         </a>
     </ul>
