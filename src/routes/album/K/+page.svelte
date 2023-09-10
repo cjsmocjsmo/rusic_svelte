@@ -1,16 +1,30 @@
 <script>
-    export let data;
-    console.log(data.albumList);
+	export let data;
+	console.log(data.albumList);
 
-    let fuck = (a1) => {
-      alert(a1)
-    }
+	let fuck = (a1) => {
+		alert(a1);
+	};
+</script>
 
-  </script>
+<svelte:head>
+	<title>Album/K</title>
+	<meta name="description" content="Rusic Album" />
+</svelte:head>
 
-  {#each data.albumList as alb}
+<div>
+	{#each data.albumList as alb}
+		<img src={alb[0]} alt={alb[1]} />
+	{/each}
+</div>
 
-      <h1 on:click={fuck(alb[1])}>{alb[0]}</h1>
-      <!-- <h1>{alb[1]}</h1> -->
-
-  {/each}
+<style>
+	img {
+		border-radius: 8px;
+		border-width: 3px;
+		border-style: solid;
+		border-color: rgb(67, 240, 44);
+		background-color: black;
+		margin: 8px;
+	}
+</style>

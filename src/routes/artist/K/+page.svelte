@@ -7,6 +7,7 @@
 	};
 </script>
 
+<h1>Artist K</h1>
 <div>
 	{#each data.artistList as art}
 		<button on:click={fuck(art[1])} on:keypress={fuck(art[1])}>
