@@ -1,16 +1,30 @@
 <script>
-  export let data;
-  console.log(data.artistList);
+	export let data;
+	console.log(data.artistList);
 
-  let fuck = (a1) => {
-    alert(a1)
-  }
-
+	let fuck = (a1) => {
+		alert(a1);
+	};
 </script>
 
-{#each data.artistList as art}
+<div>
+	{#each data.artistList as art}
+		<button on:click={fuck(art[1])} on:keypress={fuck(art[1])}>
+			{art[0]}
+		</button>
+	{/each}
+</div>
 
-    <h1 on:click={fuck(art[1])}>{art[0]}</h1>
-    <!-- <h1>{art[1]}</h1> -->
-
-{/each}
+<style>
+	button {
+		width: 175px;
+		height: 3em;
+		color: rgb(64, 238, 58);
+		background-color: black;
+		border-radius: 0.75em;
+		border-style: solid;
+		border-color: red;
+		border-width: 2.5px;
+		margin: 0.2em;
+	}
+</style>
