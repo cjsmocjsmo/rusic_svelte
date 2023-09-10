@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Album/E</title>
+	<title>Album/P</title>
 	<meta name="description" content="Rusic Album" />
 </svelte:head>
 
@@ -20,6 +20,7 @@
 
 <style>
 	img {
+		width: 200px;
 		border-radius: 8px;
 		border-width: 3px;
 		border-style: solid;
