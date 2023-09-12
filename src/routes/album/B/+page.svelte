@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Album/K</title>
+	<title>Album/B</title>
 	<meta name="description" content="Rusic Album" />
 </svelte:head>
 

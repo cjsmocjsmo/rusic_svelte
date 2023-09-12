@@ -1,21 +1,23 @@
-
-
 <script>
+	import { selartist } from '$lib/stores.js';
 	export let data;
 	console.log(data.artistList);
 
-	let fuck = (a1) => {
-		alert(a1);
-	};
+	function fuck(a1) {
+		selartist.set(a1);
+	}
 </script>
 
 <div>
-
-	{#each data.artistList as art}
-		<button on:click={fuck(art[1])} on:keypress={fuck(art[1])}>
-			{art[0]}
-		</button>
-	{/each}
+	<div>
+		{#each data.artistList as art}
+			<a href="/albforart">
+				<button on:click={fuck(art.artistid)}>
+					{art.artist}
+				</button>
+			</a>
+		{/each}
+	</div>
 </div>
 
 <style>
