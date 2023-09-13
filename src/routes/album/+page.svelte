@@ -1,7 +1,8 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
 	export let data;
 
-	import AlbumSearchForm from '../../lib/components/albumSearchForm.svelte';
+	import AlbumSearchForm from '$lib/components/albumSearchForm.svelte';
 </script>
 
 <svelte:head>
@@ -9,6 +10,7 @@
 	<meta name="description" content="Rusic Album" />
 </svelte:head>
 
+<Header />
 <AlbumSearchForm />
 
 <div>

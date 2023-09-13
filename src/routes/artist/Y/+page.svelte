@@ -1,30 +1,30 @@
 <script>
+	import ArtComp from '$lib/components/artistComp.svelte';
+	import ArtistHomeDivComp from '$lib/components/artistHomeDivComp.svelte';
 	export let data;
-	console.log(data.artistList);
 
-	let fuck = (a1) => {
-		alert(a1);
-	};
 </script>
 
-<div>
+<svelte:head>
+	<title>Artist/Y</title>
+	<meta name="description" content="Rusic Artists" />
+</svelte:head>
+
+<ArtistHomeDivComp />
+
+<div class="albList">
 	{#each data.artistList as art}
-		<button on:click={fuck(art[1])} on:keypress={fuck(art[1])}>
-			{art[0]}
-		</button>
+		<ArtComp artingo={art} />
 	{/each}
 </div>
 
 <style>
-	button {
-		width: 180px;
-		height: 3em;
-		color: rgb(64, 238, 58);
-		background-color: black;
-		border-radius: 0.75em;
-		border-style: solid;
-		border-color: red;
-		border-width: 2.5px;
-		margin: 0.2em;
+	.albList {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
+

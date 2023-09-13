@@ -14,9 +14,11 @@
     .playerBtn {
         padding: .75em;
         margin: .5em;
-        border-radius: .75em;
-        border: 2px solid #4031c2;
-        background-color: #070000;
-        color: azure;
+        background-color: black;
+		border-radius: 0.75em;
+		border-style: solid;
+		border-color: red;
+		border-width: 2.5px;
+        color: rgb(64, 238, 58);
     }
 </style>

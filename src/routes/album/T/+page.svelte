@@ -1,4 +1,5 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
 	export let data;
 	console.log(data.albumList);
 
@@ -12,6 +13,7 @@
 	<meta name="description" content="Rusic Album" />
 </svelte:head>
 
+<h1>Albums</h1>
 <div>
 	{#each data.albumList as alb}
 		<img src={alb[0]} alt={alb[1]} />

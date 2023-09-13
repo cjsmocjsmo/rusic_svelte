@@ -1,5 +1,5 @@
 <script>
-	import welcome from '$lib/images/github.svg';
+	import Header from '$lib/components/Header.svelte';
 	import TestPic from '$lib/images/testpic.jpg';
 </script>
 
@@ -8,6 +8,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<Header />
 <section>
 	<div class="nowPlayingPic">
 		<h1>Now Playing</h1>

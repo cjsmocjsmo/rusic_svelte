@@ -1,33 +1,30 @@
 <script>
-	import { selartist } from '$lib/stores.js';
+	import ArtComp from '$lib/components/artistComp.svelte';
+	import ArtistHomeDivComp from '$lib/components/artistHomeDivComp.svelte';
 	export let data;
-	console.log(data.artistList);
 
-	function fuck(a1) {
-		selartist.set(a1);
-	}
 </script>
 
-<div>
+<svelte:head>
+	<title>Artist/C</title>
+	<meta name="description" content="Rusic Artists" />
+</svelte:head>
+
+<ArtistHomeDivComp />
+
+<div class="albList">
 	{#each data.artistList as art}
-	<a href="/albforart">
-		<button on:click={fuck(art.artistid)}>
-			{art.artist}
-		</button>
-	</a>
-{/each}
+		<ArtComp artingo={art} />
+	{/each}
 </div>
 
 <style>
-	button {
-		width: 175px;
-		height: 3em;
-		color: white;
-		background-color: black;
-		border-radius: 0.75em;
-		border-style: solid;
-		border-color: red;
-		border-width: 2.5px;
-		margin: 0.2em;
+	.albList {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
+
