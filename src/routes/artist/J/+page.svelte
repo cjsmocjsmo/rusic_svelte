@@ -14,7 +14,7 @@
 
 <div class="albList">
 	{#each data.artistList as art}
-		<ArtComp artingo={art} />
+		<ArtComp artinfo={art} />
 	{/each}
 </div>
 

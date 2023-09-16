@@ -4,10 +4,10 @@
 	export let data;
 	console.log(data.albumList);
 
+
 	function fuck(a1) {
-		selalbum.set(a1)
-		alert(a1);
-	};
+		selalbum.set(a1);
+	}
 </script>
 
 <svelte:head>
@@ -18,7 +18,12 @@
 <AlbumHomeDivComp />
 <div>
 	{#each data.albumList as alb}
-		<img src={alb.imageurl} alt={alb.albumid} on:click{fuck(alb.albumid)}/>
+	<p>{alb.rusticid}</p>
+		<a href={alb.rusticid}>
+			<button on:click={fuck(alb.albumid)}>
+				<img src={alb.imageurl} alt={alb.albumid} />
+			</button>
+		</a>
 	{/each}
 </div>
 
