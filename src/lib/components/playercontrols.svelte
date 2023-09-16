@@ -1,24 +1,24 @@
 <script>
-
+	export let mp3;
 </script>
 
-<div>
-    <button class="playerBtn">Rev</button>
-    <button class="playerBtn">Play</button>
-    <button class="playerBtn">Pause</button>
-    <button class="playerBtn">Next</button>
-    <button class="playerBtn">Stop</button>
+<div class="audioCtls">
+	{#key mp3}
+		<audio controls autoplay>
+			<source src={mp3} type="audio/mpeg" />
+		</audio>
+	{/key}
 </div>
 
 <style>
-    .playerBtn {
-        padding: .75em;
-        margin: .5em;
-        background-color: black;
-		border-radius: 0.75em;
-		border-style: solid;
-		border-color: red;
-		border-width: 2.5px;
-        color: rgb(64, 238, 58);
-    }
+	audio {
+		width: 100%;
+	}
+	.audioCtls {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1.5em;
+	}
 </style>

@@ -1,18 +1,17 @@
 <script>
-	import Header from '../lib/components/Header.svelte';
 	import './styles.css';
 	import PlayerControls from '$lib/components/playercontrols.svelte';
+	import { selsongsforalbum } from '$lib/stores.js';
 </script>
 
 <div class="app">
-	<!-- <Header /> -->
 
 	<main>
 		<slot />
 	</main>
 
 	<footer>
-		<PlayerControls />
+		<PlayerControls mp3={$selsongsforalbum}/>
 	</footer>
 </div>
 

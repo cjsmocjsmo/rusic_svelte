@@ -1,9 +1,11 @@
 <script>
-	import Header from '$lib/components/Header.svelte';
+	import { selalbum } from '$lib/stores.js';
+	import AlbumHomeDivComp from '$lib/components/albumHomeDivComp.svelte';
 	export let data;
 	console.log(data.albumList);
 
-	let fuck = (a1) => {
+	function fuck(a1) {
+		selalbum.set(a1)
 		alert(a1);
 	};
 </script>
@@ -13,16 +15,15 @@
 	<meta name="description" content="Rusic Album" />
 </svelte:head>
 
-<h1>Albums</h1>
+<AlbumHomeDivComp />
 <div>
 	{#each data.albumList as alb}
-		<img src={alb[0]} alt={alb[1]} />
+		<img src={alb.imageurl} alt={alb.albumid} on:click{fuck(alb.albumid)}/>
 	{/each}
 </div>
 
 <style>
 	img {
-		width: 200px;
 		border-radius: 8px;
 		border-width: 3px;
 		border-style: solid;

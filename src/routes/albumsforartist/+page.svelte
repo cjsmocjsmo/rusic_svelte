@@ -1,6 +1,7 @@
 <script>
+	import ArtistHomeDivComp from '$lib/components/artistHomeDivComp.svelte';
 	import { selartist } from '$lib/stores.js';
-	import { selalbum } from '$lib/stores.js';
+	import { selalbumforartist } from '$lib/stores.js';
 	import { onMount } from 'svelte';
 
 	let datad = [];
@@ -13,9 +14,11 @@
 	});
 
 	function fuck2(a1) {
-		selalbum.set(a1);
+		selalbumforartist.set(a1);
 	}
 </script>
+
+<ArtistHomeDivComp />
 
 <h1>Albums For Artist</h1>
 <div class="albforartImg">
