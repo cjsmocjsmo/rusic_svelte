@@ -1,12 +1,12 @@
 <script>
-	import ArtistHomeDivComp from '$lib/components/artistHomeDivComp.svelte';
-	import { selartist } from '$lib/stores.js';
+	import HomeDivComp from '$lib/components/homeDivComp.svelte';
+	import { selmedia } from '$lib/stores.js';
 	import { selalbumforartist } from '$lib/stores.js';
 	import { onMount } from 'svelte';
 
 	let datad = [];
 	onMount(async () => {
-		let URL = 'http://192.168.0.26:8080/albforart/' + $selartist;
+		let URL = 'http://192.168.0.26:8080/albforart/' + $selmedia;
 		console.log(URL);
 		const res = await fetch(URL);
 		datad = await res.json();
@@ -18,7 +18,7 @@
 	}
 </script>
 
-<ArtistHomeDivComp />
+<HomeDivComp />
 
 <h1>Albums For Artist</h1>
 <div class="albforartImg">

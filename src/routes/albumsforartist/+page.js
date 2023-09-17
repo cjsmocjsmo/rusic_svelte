@@ -1,9 +1,9 @@
-// import { selartist } from '$lib/stores.js';
+// import { selmedia } from '$lib/stores.js';
 
 // export async function load({ fetch, params }) {
 
 //     let art_val;
-// 	selartist.subscribe((value) => {
+// 	selmedia.subscribe((value) => {
 // 		art_val = value;
 // 	});
 

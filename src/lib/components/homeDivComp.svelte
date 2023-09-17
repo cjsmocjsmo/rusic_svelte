@@ -3,12 +3,19 @@
 </script>
 
 <div class="homeDiv">
+	<a href="/artist">
+		<button class="homeBtn">Artist</button>
+	</a>
 	<a href="/album">
 		<button class="homeBtn">Album</button>
 	</a>
 </div>
 
 <style>
+	a {
+		margin-right: 0.5em;
+		margin-left: 0.5em;
+	}
     .homeDiv {
 		display: flex;
 		flex-direction: row;

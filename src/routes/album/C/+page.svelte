@@ -1,13 +1,12 @@
 <script>
-	import { selalbum } from '$lib/stores.js';
-	import AlbumHomeDivComp from '$lib/components/albumHomeDivComp.svelte';
+	import { selmedia } from '$lib/stores.js';
+	import HomeDivComp from '$lib/components/homeDivComp.svelte';
 	export let data;
 	console.log(data.albumList);
 
 	function fuck(a1) {
-		selalbum.set(a1)
-		alert(a1);
-	};
+		selmedia.set(a1);
+	}
 </script>
 
 <svelte:head>
@@ -15,14 +14,23 @@
 	<meta name="description" content="Rusic Album" />
 </svelte:head>
 
-<AlbumHomeDivComp />
-<div>
+<HomeDivComp />
+<div class="albImgDiv">
 	{#each data.albumList as alb}
-		<img src={alb.imageurl} alt={alb.albumid} on:click{fuck(alb.albumid)}/>
+		<a href="/songsforalbumalbum">
+			<img src={alb.imageurl} alt={alb.albumid} on:click={fuck(alb.albumid)} />
+		</a>
 	{/each}
 </div>
 
 <style>
+	.albImgDiv {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
 	img {
 		border-radius: 8px;
 		border-width: 3px;
@@ -32,4 +40,3 @@
 		margin: 8px;
 	}
 </style>
-

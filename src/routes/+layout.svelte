@@ -1,7 +1,7 @@
 <script>
 	import './styles.css';
 	import PlayerControls from '$lib/components/playercontrols.svelte';
-	import { selsongsforalbum } from '$lib/stores.js';
+	import { selmediatoplay } from '$lib/stores.js';
 </script>
 
 <div class="app">
@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<PlayerControls mp3={$selsongsforalbum}/>
+		<PlayerControls mp3={$selmediatoplay}/>
 	</footer>
 </div>
 

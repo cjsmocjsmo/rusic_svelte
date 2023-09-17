@@ -1,6 +1,6 @@
 <script>
 	import ArtComp from '$lib/components/artistComp.svelte';
-	import ArtistHomeDivComp from '$lib/components/artistHomeDivComp.svelte';
+	import HomeDivComp from '$lib/components/homeDivComp.svelte';
 	export let data;
 
 </script>
@@ -10,7 +10,7 @@
 	<meta name="description" content="Rusic Artists" />
 </svelte:head>
 
-<ArtistHomeDivComp />
+<HomeDivComp />
 
 <div class="albList">
 	{#each data.artistList as art}

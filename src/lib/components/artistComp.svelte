@@ -1,9 +1,9 @@
 <script>
-	import { selartist } from '$lib/stores.js';
+	import { selmedia } from '$lib/stores.js';
 	export let artinfo;
 
 	function fuck(a1) {
-		selartist.set(a1);
+		selmedia.set(a1);
 	}
 </script>
 
