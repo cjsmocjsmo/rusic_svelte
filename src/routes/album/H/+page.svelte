@@ -5,9 +5,8 @@
 	console.log(data.albumList);
 
 	function fuck(a1) {
-		selmedia.set(a1)
-		alert(a1);
-	};
+		selmedia.set(a1);
+	}
 </script>
 
 <svelte:head>
@@ -16,13 +15,22 @@
 </svelte:head>
 
 <HomeDivComp />
-<div>
+<div class="albImgDiv">
 	{#each data.albumList as alb}
-		<img src={alb.imageurl} alt={alb.albumid} on:click{fuck(alb.albumid)}/>
+		<a href="/songsforalbumalbum">
+			<img src={alb.imageurl} alt={alb.albumid} on:click={fuck(alb.albumid)} />
+		</a>
 	{/each}
 </div>
 
 <style>
+	.albImgDiv {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
 	img {
 		border-radius: 8px;
 		border-width: 3px;
