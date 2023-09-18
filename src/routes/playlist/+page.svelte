@@ -1,9 +1,15 @@
 <script>
+	import { selplaylist } from '$lib/stores.js';
 	import Header from '$lib/components/Header.svelte';
 	export let data;
 	console.log(data.allpls);
 
 	let isVisible = false;
+	function toggle(x) {
+		selplaylist.set(x);
+		isVisible = true;
+		console.log(x);
+	}
 </script>
 
 <svelte:head>
@@ -16,7 +22,7 @@
 <h1>Playlists</h1>
 {#if isVisible}
 	<div class="btnDiv">
-		<a href="#">
+		<a href="">
 			<button class="randPl" on:click={() => (isVisible = false)}> Play Playlist </button>
 		</a>
 		<a href="/deleteplaylist">
@@ -32,7 +38,7 @@
 
 <div>
 	{#each data.allpls as pl}
-		<button class="plBtn" on:click={() => (isVisible = true)}>{pl.name}</button>
+		<button class="plBtn" on:click={toggle(pl.rusicid)}>{pl.name}</button>
 	{/each}
 </div>
 

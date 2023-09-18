@@ -3,7 +3,6 @@
 	import { selmediatoplay } from '$lib/stores.js';
 
 	import HomeDivComp from '$lib/components/homeDivComp.svelte';
-	import Playercontrols from '$lib/components/playercontrols.svelte';
 	import { onMount } from 'svelte';
 
 	let songs = [];
@@ -24,11 +23,6 @@
 </script>
 
 <HomeDivComp />
-
-<!-- <h1>Songs For Album</h1>
-{#key mp3_src}
-	<Playercontrols  mp3={mp3_src}/>
-{/key} -->
 
 <div class="songDiv">
 	{#each songs as item}
