@@ -1,8 +1,9 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
-	import HomeDivComp from '$lib/components/homeDivComp.svelte';
-	// import AddEmptyPlaylist from '../../lib/components/addEmptyPlaylist.svelte';
-	// import AddRandomPlaylist from '../../lib/components/addRandomPlaylist.svelte';
+	export let data;
+	console.log(data.allpls);
+
+	let isVisible = false;
 </script>
 
 <svelte:head>
@@ -11,8 +12,32 @@
 </svelte:head>
 
 <Header />
+
+<h1>Playlists</h1>
+{#if isVisible}
+	<div class="btnDiv">
+		<a href="#">
+			<button class="randPl" on:click={() => (isVisible = false)}> Play Playlist </button>
+		</a>
+		<a href="/deleteplaylist">
+			<button class="randPl"> Delete Playlist </button>
+		</a>
+		<a href="/editplaylist">
+			<button class="randPl"> Edit Playlist </button>
+		</a>
+	</div>
+{:else}
+	<p />
+{/if}
+
+<div>
+	{#each data.allpls as pl}
+		<button class="plBtn" on:click={() => (isVisible = true)}>{pl.name}</button>
+	{/each}
+</div>
+
 <div class="btnDiv">
-	<a href="http://192.168.0.26:8080/addemptyplaylist">
+	<a href="/addemptyplaylist">
 		<button class="randPl"> Add Empty Playlist </button>
 	</a>
 	<a href="/addrandomplaylist">
@@ -20,54 +45,16 @@
 	</a>
 </div>
 
-<h1>Playlists</h1>
-<div>
-	<ul>
-		<div class="playlistDiv">
-			<div class="plcard">
-				<p>Playlist1</p>
-				<div class="plcontrols">
-					<p>+</p>
-					<p>-</p>
-					<p>e</p>
-				</div>
-			</div>
-		</div>
-		<div class="playlistDiv">
-			<div class="plcard">
-				<p>Playlist2</p>
-				<div class="plcontrols">
-					<p>+</p>
-					<p>-</p>
-					<p>e</p>
-				</div>
-			</div>
-		</div>
-	</ul>
-</div>
-
 <style>
-	p {
-		font-size: 1.5em;
-		margin: 0.5em;
-	}
-	.plcontrols {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.plcard {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		margin: 1em;
-		padding: 1em;
+	.plBtn {
+		width: 45%;
+		padding: 0.5em;
 		border-radius: 12px;
-		border: 3px solid rgb(64, 238, 58);
-		color: white;
+		border: 3px solid red;
+		color: rgb(64, 238, 58);
 		background-color: black;
+		margin: 0.5em;
+		font-size: 1.5em;
 	}
 	a {
 		margin: 1em;

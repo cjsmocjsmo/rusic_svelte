@@ -36,7 +36,7 @@
 			<button class="songBtn" on:click={toggle(item.fullpath)}>
 				{item.song}
 			</button>
-			<button class="addBtn">Add</button>
+			<button class="addBtn" >Add</button>
 		</div>
 	{/each}
 </div>
