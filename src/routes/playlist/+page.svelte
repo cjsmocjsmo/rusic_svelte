@@ -1,14 +1,16 @@
 <script>
-	import { selplaylist } from '$lib/stores.js';
+	import { selplaylistid } from '$lib/stores.js';
+	import { selplaylistname } from '$lib/stores.js';
 	import Header from '$lib/components/Header.svelte';
 	export let data;
 	console.log(data.allpls);
 
 	let isVisible = false;
-	function toggle(x) {
-		selplaylist.set(x);
+	function toggle(rusicid, plname) {
+		selplaylistid.set(rusicid);
+		selplaylistname.set(plname);
 		isVisible = true;
-		console.log(x);
+		console.log(rusicid);
 	}
 </script>
 
@@ -38,7 +40,7 @@
 
 <div>
 	{#each data.allpls as pl}
-		<button class="plBtn" on:click={toggle(pl.rusicid)}>{pl.name}</button>
+		<button class="plBtn" on:click={toggle(pl.rusicid, pl.name)}>{pl.name}</button>
 	{/each}
 </div>
 

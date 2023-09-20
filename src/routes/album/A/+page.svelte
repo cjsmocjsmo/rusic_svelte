@@ -2,7 +2,6 @@
 	import { selmedia } from '$lib/stores.js';
 	import HomeDivComp from '$lib/components/homeDivComp.svelte';
 	export let data;
-	console.log(data.albumList);
 
 	function fuck(a1) {
 		selmedia.set(a1);
@@ -18,12 +17,22 @@
 <div class="albImgDiv">
 	{#each data.albumList as alb}
 		<a href="/songsforalbumalbum">
-			<img src={alb.imageurl} alt={alb.albumid} on:click={fuck(alb.albumid)} />
+			<button on:click={fuck(alb.albumid)} on:keypress={fuck(alb.albumid)}>
+				<img src={alb.imageurl} alt={alb.albumid} />
+			</button>
 		</a>
 	{/each}
 </div>
 
 <style>
+	button {
+		background-color: black;
+		margin: 0.5em;
+		border-style: solid;
+		border-radius: 8px;
+		border-width: 2.5px;
+		border-color: red;
+	}
 	.albImgDiv {
 		display: flex;
 		flex-direction: row;
@@ -33,10 +42,6 @@
 	}
 	img {
 		border-radius: 8px;
-		border-width: 3px;
-		border-style: solid;
-		border-color: rgb(67, 240, 44);
-		background-color: black;
 		margin: 8px;
 	}
 </style>

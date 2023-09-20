@@ -4,7 +4,7 @@
 
 <div class="audioCtls">
 	{#key mp3}
-		<audio controls preload="auto" autoplay>
+		<audio controls="controls" preload="auto" autoplay>
 			<source src={mp3} type="audio/mpeg" />
 		</audio>
 	{/key}

@@ -1,3 +1,6 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+export async function load({ fetch, params }) {
+    const res = await fetch(`http://192.168.0.26:8080/randomcoverart`);
+    const cart = await res.json();
+
+    return { cart };
+}

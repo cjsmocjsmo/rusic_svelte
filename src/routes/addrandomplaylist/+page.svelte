@@ -1,13 +1,16 @@
 <script>
+    import { selplaylistid, selplaylistname, selplaylistcount } from '$lib/stores.js';
 	import PlaylistDivComp from '$lib/components/playlistDivComp.svelte';
+    let playlistname = "";
+    let playlistcount = "";
 </script>
 
 <PlaylistDivComp />
 <div class="emptyForm">
 	<form>
-		<input type="text" name="name" placeholder="Playlist Name" />
-        <input type="text" name="numsongs" placeholder="Number of Songs" />
-		<button type="submit">Add</button>
+		<input bind:value={playlistname} type="text" name="name" placeholder="Playlist Name" />
+        <input bind:value={playlistcount} type="text" name="numsongs" placeholder="Number of Songs" />
+		<button on:click|preventDefault={submitemptyplaylist} type="submit">Add</button>
 	</form>
 </div>
 <style>
@@ -33,7 +36,7 @@
         border-color: red;
         border-width: 2.5px;
         font-size: 2em;
-        margin: 1em;
+        margin: .5em;
     }
     .emptyForm {
         display: flex;

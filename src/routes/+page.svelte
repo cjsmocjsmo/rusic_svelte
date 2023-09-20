@@ -1,6 +1,7 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
 	import TestPic from '$lib/images/testpic.jpg';
+	export let data;
 </script>
 
 <svelte:head>
@@ -17,17 +18,25 @@
 	<div>
 		<h1>Albums Of Interest</h1>
 		<ul>
-			<img class="randPic" src={TestPic} alt="Welcome" />
-			<img class="randPic" src={TestPic} alt="Welcome" />
-			<img class="randPic" src={TestPic} alt="Welcome" />
-			<img class="randPic" src={TestPic} alt="Welcome" />
-			<img class="randPic" src={TestPic} alt="Welcome" />
-			<img class="randPic" src={TestPic} alt="Welcome" />
+			{#each data.cart as cart}
+				<button>
+					<img class="randPic" src={cart.httpthumbpath} alt="Welcome" />
+				</button>
+			{/each}
 		</ul>
 	</div>
 </section>
 
 <style>
+	button {
+		background-color: black;
+		border: none;
+		margin: 0.5em;
+		border-radius: 7px;
+		border-style: solid;
+		border-color: red;
+		border-width: 2.5px;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
@@ -35,11 +44,9 @@
 		align-items: center;
 		flex: 0.6;
 	}
-
 	h1 {
 		width: 100%;
 	}
-
 	.nowPlayingPic {
 		display: flex;
 		flex-direction: column;
@@ -47,30 +54,17 @@
 		align-items: center;
 		width: 100%;
 	}
-
 	.mainImg {
 		width: 250px;
 		height: 250px;
 	}
-
 	.randPic {
 		width: 150px;
 		height: 150px;
+		margin: 7px;
+		/* border-style: solid;
+		border-color: rgb(67, 240, 44);
+		border-width: 2.5px; */
+		border-radius: 8px;
 	}
-
-	/* .welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	} */
 </style>
