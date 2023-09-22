@@ -1,4 +1,5 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
 	let searchTerm = '';
 </script>
 
@@ -7,9 +8,10 @@
 	<meta name="description" content="Rusic Songs" />
 </svelte:head>
 
+<Header />
 <h1>Song Search</h1>
 <form>
-	<input type="text" name="searchTerm" placeholder="Song To Search For"/>
+	<input bind:value={searchTerm} type="text" name="searchTerm" placeholder="Song To Search For"/>
 	<button type="submit">Search</button>
 </form>
 

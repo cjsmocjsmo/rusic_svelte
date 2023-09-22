@@ -25,9 +25,11 @@
 <div class="songDiv">
 	{#each songs as item}
 		<div class="songCard">
-			<button class="songBtn" on:click={toggle(item.fullpath)}>
-				{item.song}
-			</button>
+			<a href="/album">
+				<button class="songBtn" on:click={toggle(item.fullpath)}>
+					{item.song}
+				</button>
+			</a>
 			<button class="addBtn">Add</button>
 		</div>
 	{/each}
@@ -55,7 +57,7 @@
 		align-items: center;
 	}
 	.songBtn {
-		width: 80%;
+		width: 100%;
 		height: 2.7em;
 		color: rgb(64, 238, 58);
 		background-color: black;

@@ -27,10 +27,12 @@
 <div class="songDiv">
 	{#each songs as item}
 		<div class="songCard">
-			<button class="songBtn" on:click={toggle(item.fullpath)}>
-				{item.song}
-			</button>
-			<button class="addBtn" >Add</button>
+			<a href="/artist">
+				<button class="songBtn" on:click={toggle(item.fullpath)}>
+					{item.song}
+				</button>
+			</a>
+			<button class="addBtn">Add</button>
 		</div>
 	{/each}
 </div>

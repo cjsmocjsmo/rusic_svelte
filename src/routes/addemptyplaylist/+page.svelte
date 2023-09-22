@@ -7,7 +7,7 @@
 		const URL = `http://192.168.0.26:8080/createemptyplaylist/` + emptyplaylistname;
 		const res = await fetch(URL);
 		answer = await res.json();
-		window.location.href = '/playlist';
+		// window.location.href = '/playlist';
 		console.log('this is answer');
 		console.log(answer);
 	}
@@ -19,6 +19,9 @@
 	<div class="answerDiv">
 		<h1>{emptyplaylistname}</h1>
 		<p>Playlist has been created</p>
+		<!-- <a href="/playlist">
+			<button>Go To Playlist</button>
+		</a> -->
 	</div>
 {:else}
 	<div class="emptyForm">
@@ -37,10 +40,10 @@
 		align-items: center;
 		margin-top: 4em;
 	}
-	a {
+	/* a {
 		width: 100%;
 		height: 2.5em;
-	}
+	} */
 	button {
 		width: 30%;
 		height: 2.5em;

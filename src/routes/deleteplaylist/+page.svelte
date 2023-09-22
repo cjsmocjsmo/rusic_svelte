@@ -7,7 +7,6 @@
 		const URL = `http://192.168.0.26:8080/deleteplaylist/` + rusicid;
 		const res = await fetch(URL);
 		const data = await res.json();
-		window.location.href = '/playlist';
 		console.log(data);
 	}
 </script>

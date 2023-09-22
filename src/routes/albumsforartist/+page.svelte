@@ -24,14 +24,24 @@
 <div class="albforartImg">
 	<ul>
 		{#each datad as d}
-			<a href="/songsforalbum">
-				<img id={d.albumid} src={d.imageurl} alt={d.title} on:click={fuck2(d.albumid)} />
+			<a href="/songsforalbum" on:click={fuck2(d.albumid)}>
+				<button>
+				<img src={d.imageurl} alt={d.title} />
+				</button>
 			</a>
 		{/each}
 	</ul>
 </div>
 
 <style>
+	button {
+		background-color: black;
+		margin: 0.5em;
+		border-style: solid;
+		border-radius: 8px;
+		border-width: 2.5px;
+		border-color: red;
+	}
 	.albforartImg {
 		display: flex;
 		flex-direction: row;
