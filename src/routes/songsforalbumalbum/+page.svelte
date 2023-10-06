@@ -28,7 +28,7 @@
 	{#each songs as item}
 		<div class="songCard">
 			<a href="/album">
-				<button class="songBtn" on:click={toggle(item.fullpath, item.imageurl)}>
+				<button class="songBtn" on:click={toggle(item.fullpath, item.imgurl)}>
 					{item.song}
 				</button>
 			</a>
