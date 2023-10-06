@@ -1,11 +1,13 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
-	import TestPic from '$lib/images/testpic.jpg';
+	// import TestPic from '$lib/images/testpic.jpg';
+	// import Pic2 from '$lib/images/favicon.png';
+	import { nowplayingimgurl } from '$lib/stores.js';
 	export let data;
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Rusic</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
@@ -13,7 +15,7 @@
 <section>
 	<div class="nowPlayingPic">
 		<h1>Now Playing</h1>
-		<img class="mainImg" src={TestPic} alt="Welcome" />
+		<img class="mainImg" src={$nowplayingimgurl} alt="Welcome" />
 	</div>
 	<div>
 		<h1>Albums Of Interest</h1>

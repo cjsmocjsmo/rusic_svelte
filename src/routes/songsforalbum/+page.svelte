@@ -1,6 +1,7 @@
 <script>
 	import { selalbumforartist } from '$lib/stores.js';
 	import { selmediatoplay } from '$lib/stores.js';
+	import { nowplayingimgurl } from '$lib/stores.js';
 
 	import HomeDivComp from '$lib/components/homeDivComp.svelte';
 	import { onMount } from 'svelte';
@@ -15,8 +16,9 @@
 	});
 
 	let mp3_src = '';
-	function toggle(fullpath) {
+	function toggle(fullpath, imgurl) {
 		selmediatoplay.set(fullpath);
+		nowplayingimgurl.set(imgurl);
 		mp3_src = fullpath;
 		console.log(fullpath);
 	}
@@ -28,7 +30,7 @@
 	{#each songs as item}
 		<div class="songCard">
 			<a href="/artist">
-				<button class="songBtn" on:click={toggle(item.fullpath)}>
+				<button class="songBtn" on:click={toggle(item.fullpath, item.imgurl)}>
 					{item.song}
 				</button>
 			</a>
