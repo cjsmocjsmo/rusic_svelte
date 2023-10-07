@@ -34,8 +34,10 @@
 					{item.song}
 				</button>
 			</a>
-			<button class="addBtn">Add</button>
-			<button class="addBtn">Like</button>
+			<div>
+				<button class="addBtn">Add</button>
+				<button class="addBtn">Like</button>
+			</div>
 		</div>
 	{/each}
 </div>
@@ -51,7 +53,7 @@
 		border-width: 2.5px;
 		border-radius: 0.75em;
 		margin: 0.25em;
-		width: 20em;
+		width: 30%;
 	}
 
 	.songDiv {
@@ -74,8 +76,7 @@
 		margin: 0.25em;
 	}
 	.addBtn {
-		width: 30%;
-		height: 2.7em;
+		padding: 8px;
 		color: rgb(64, 238, 58);
 		background-color: black;
 		border-radius: 0.75em;
