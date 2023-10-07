@@ -1,9 +1,13 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
-	// import TestPic from '$lib/images/testpic.jpg';
-	// import Pic2 from '$lib/images/favicon.png';
 	import { nowplayingimgurl } from '$lib/stores.js';
+	import { selrandalbumid } from '$lib/stores.js';
 	export let data;
+
+	function toggle(albumid) {
+		console.log(albumid)
+		selrandalbumid.set(albumid);
+	}
 </script>
 
 <svelte:head>
@@ -21,8 +25,14 @@
 		<h1>Albums Of Interest</h1>
 		<ul>
 			{#each data.cart as cart}
-				<button>
-					<img class="randPic" src={cart.httpthumbpath} alt="Welcome" />
+				<button on:click={toggle(cart.albumid)}>
+					<a href="/songsforrandalbum">
+						<img
+							class="randPic"
+							src={cart.httpthumbpath}
+							alt="Welcome"
+						/>
+					</a>
 				</button>
 			{/each}
 		</ul>
@@ -59,6 +69,7 @@
 	.mainImg {
 		width: 250px;
 		height: 250px;
+		border-radius: 8px;
 	}
 	.randPic {
 		width: 150px;

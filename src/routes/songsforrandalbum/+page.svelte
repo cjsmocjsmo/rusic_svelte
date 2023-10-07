@@ -1,5 +1,5 @@
 <script>
-	import { selalbumforartist } from '$lib/stores.js';
+	import { selrandalbumid } from '$lib/stores.js';
 	import { selmediatoplay } from '$lib/stores.js';
 	import { nowplayingimgurl } from '$lib/stores.js';
 
@@ -8,7 +8,7 @@
 
 	let songs = [];
 	onMount(async () => {
-		let URL = 'http://192.168.0.26:8080/songsforalbum/' + $selalbumforartist;
+		let URL = 'http://192.168.0.26:8080/songsforalbum/' + $selrandalbumid;
 		console.log(URL);
 		const res = await fetch(URL);
 		songs = await res.json();
@@ -35,7 +35,6 @@
 				</button>
 			</a>
 			<button class="addBtn">Add</button>
-			<button class="addBtn">Like</button>
 		</div>
 	{/each}
 </div>
@@ -62,7 +61,7 @@
 		align-items: center;
 	}
 	.songBtn {
-		width: 100%;
+		width: 80%;
 		height: 2.7em;
 		color: rgb(64, 238, 58);
 		background-color: black;
@@ -82,7 +81,7 @@
 		border-style: solid;
 		border-color: red;
 		border-width: 2.5px;
-		font-size: 1em;
+		font-size: 1.5em;
 		margin: 0.25em;
 	}
 	/* .playBtn {

@@ -3,6 +3,9 @@
 </script>
 
 <div class="homeDiv">
+	<a href="/">
+		<button class="homeBtn">Home</button>
+	</a>
 	<a href="/artist">
 		<button class="homeBtn">Artist</button>
 	</a>
@@ -25,8 +28,8 @@
 		margin-bottom: 2em;
 	}
 	.homeBtn {
-		width: 275px;
-		height: 3em;
+		width: 200px;
+		height: 2em;
 		color: rgb(64, 238, 58);
 		background-color: black;
 		border-radius: 0.75em;
