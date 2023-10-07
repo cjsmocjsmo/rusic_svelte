@@ -29,17 +29,23 @@
 <div class="songDiv">
 	{#each songs as item}
 		<div class="songCard">
-			<a href="/">
-				<button class="songBtn" on:click={toggle(item.fullpath, item.imgurl)}>
+			<button class="songBtn" on:click={toggle(item.fullpath, item.imgurl)}>
+				<a href="/">
 					{item.song}
-				</button>
-			</a>
+				</a>
+			</button>
+
 			<button class="addBtn">Add</button>
 		</div>
 	{/each}
 </div>
 
 <style>
+	a {
+		margin: 8px;
+		text-decoration: none;
+		color: rgb(64, 238, 58);
+	}
 	.songCard {
 		display: flex;
 		flex-direction: column;
@@ -61,7 +67,7 @@
 		align-items: center;
 	}
 	.songBtn {
-		width: 80%;
+		width: 100%;
 		height: 2.7em;
 		color: rgb(64, 238, 58);
 		background-color: black;
@@ -81,7 +87,7 @@
 		border-style: solid;
 		border-color: red;
 		border-width: 2.5px;
-		font-size: 1.5em;
+		font-size: 1em;
 		margin: 0.25em;
 	}
 	/* .playBtn {
