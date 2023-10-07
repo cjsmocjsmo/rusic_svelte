@@ -18,7 +18,6 @@
 <Header />
 <section>
 	<div class="nowPlayingPic">
-		<!-- <h1>Now Playing</h1> -->
 		<img class="mainImg" src={$nowplayingimgurl} alt="Welcome" />
 	</div>
 	<div>
@@ -65,6 +64,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
+		margin-top: 2em;
 	}
 	.mainImg {
 		width: 200px;
