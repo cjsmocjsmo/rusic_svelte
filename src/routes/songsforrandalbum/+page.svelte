@@ -29,7 +29,7 @@
 <div class="songDiv">
 	{#each songs as item}
 		<div class="songCard">
-			<a href="/artist">
+			<a href="/">
 				<button class="songBtn" on:click={toggle(item.fullpath, item.imgurl)}>
 					{item.song}
 				</button>

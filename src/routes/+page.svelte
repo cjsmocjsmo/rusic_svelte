@@ -18,7 +18,7 @@
 <Header />
 <section>
 	<div class="nowPlayingPic">
-		<h1>Now Playing</h1>
+		<!-- <h1>Now Playing</h1> -->
 		<img class="mainImg" src={$nowplayingimgurl} alt="Welcome" />
 	</div>
 	<div>
@@ -67,8 +67,8 @@
 		width: 100%;
 	}
 	.mainImg {
-		width: 250px;
-		height: 250px;
+		width: 200px;
+		height: 200px;
 		border-radius: 8px;
 	}
 	.randPic {
