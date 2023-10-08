@@ -13,7 +13,7 @@
 <HomeDivComp />
 
 <div class="albList">
-	{#each data.artistList as art}
+	{#each data.artJ as art}
 		<ArtComp artinfo={art} />
 	{/each}
 </div>
