@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<PlayerControls mp3={$selmediatoplay}/>
+		<PlayerControls mp3={$selmediatoplay} />
 	</footer>
 </div>
 

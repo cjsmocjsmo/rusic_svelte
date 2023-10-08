@@ -40,7 +40,7 @@
 
 <div>
 	{#each data.allpls as pl}
-		<button class="plBtn" on:click={toggle(pl.rusicid, pl.name)}>{pl.name}</button>
+		<button class="plBtn" on:click={toggle(pl.rusicid, pl.name)}>{pl.name} {pl.numsongs}</button>
 	{/each}
 </div>
 

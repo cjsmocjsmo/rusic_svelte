@@ -22,6 +22,13 @@
 		mp3_src = fullpath;
 		console.log(fullpath);
 	}
+
+	async function addToLikes(rusicid) {
+		let URL = 'http://192.168.0.26:8080/addsongtomylikes/' + rusicid;
+		const res = await fetch(URL);
+		const answer = await res.json();
+		alert("Song has been added to your likes!")
+	}
 </script>
 
 <HomeDivComp />
@@ -36,7 +43,7 @@
 			</a>
 			<div>
 				<button class="addBtn">Add</button>
-				<button class="addBtn">Like</button>
+				<button class="addBtn" on:click={addToLikes(item.rusicid)}>Like</button>
 			</div>
 		</div>
 	{/each}
@@ -55,7 +62,6 @@
 		margin: 0.25em;
 		width: 30%;
 	}
-
 	.songDiv {
 		display: flex;
 		flex-direction: row;
@@ -86,16 +92,4 @@
 		font-size: 1em;
 		margin: 0.25em;
 	}
-	/* .playBtn {
-		width: 20%;
-		height: 2em;
-		color: rgb(64, 238, 58);
-		background-color: black;
-		border-radius: 0.75em;
-		border-style: solid;
-		border-color: red;
-		border-width: 2.5px;
-		font-size: 1.75em;
-		margin: .25em;
-	} */
 </style>
