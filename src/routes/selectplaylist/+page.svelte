@@ -1,5 +1,5 @@
 <script>
-    import { selSong } from '$lib/stores.js';
+    import { selsong } from '$lib/stores.js';
     import HomeDivComp from '$lib/components/homeDivComp.svelte';
 
 </script>
@@ -11,4 +11,4 @@
 
 <HomeDivComp />
 
-<p>{$selSong}</p>
+<p>{$selsong}</p>
