@@ -12,3 +12,5 @@ export const playlistcount = writable(0);
 
 export const nowplayingimgurl = writable(TestPic);
 export const selrandalbumid = writable("None");
+
+export const selsong = writable("None");

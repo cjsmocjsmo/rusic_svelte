@@ -2,6 +2,7 @@
 	import { selalbumforartist } from '$lib/stores.js';
 	import { selmediatoplay } from '$lib/stores.js';
 	import { nowplayingimgurl } from '$lib/stores.js';
+	import { selsong } from '$lib/stores.js';
 
 	import HomeDivComp from '$lib/components/homeDivComp.svelte';
 	import { onMount } from 'svelte';
@@ -29,6 +30,10 @@
 		const answer = await res.json();
 		alert("Song has been added to your likes!")
 	}
+
+	function setSelSong(song) {
+		selsong.set(song);
+	}
 </script>
 
 <HomeDivComp />
@@ -42,7 +47,9 @@
 				</button>
 			</a>
 			<div>
-				<button class="addBtn">Add</button>
+				<a href="/selectplaylist">
+					<button class="addBtn" on:click={setSelSong(item.rucicid)}>Add</button>
+				</a>
 				<button class="addBtn" on:click={addToLikes(item.rusicid)}>Like</button>
 			</div>
 		</div>
