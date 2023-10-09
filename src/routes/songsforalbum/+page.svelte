@@ -48,7 +48,7 @@
 			</a>
 			<div>
 				<a href="/selectplaylist">
-					<button class="addBtn" on:click={setSelSong(item.rucicid)}>Add</button>
+					<button class="addBtn" on:click={setSelSong(item.rusicid)}>Add</button>
 				</a>
 				<button class="addBtn" on:click={addToLikes(item.rusicid)}>Like</button>
 			</div>
