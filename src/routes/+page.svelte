@@ -72,12 +72,14 @@
 		border-radius: 8px;
 	}
 	.randPic {
-		width: 150px;
-		height: 150px;
+		width: 100px;
+		height: 100px;
 		margin: 7px;
 		/* border-style: solid;
 		border-color: rgb(67, 240, 44);
 		border-width: 2.5px; */
 		border-radius: 8px;
 	}
+
+
 </style>

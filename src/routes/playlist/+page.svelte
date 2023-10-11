@@ -12,6 +12,7 @@
 		isVisible = true;
 		console.log(rusicid);
 	}
+
 </script>
 
 <svelte:head>
@@ -20,7 +21,14 @@
 </svelte:head>
 
 <Header />
-
+<div class="btnDiv">
+	<a href="/addemptyplaylist">
+		<button class="randPl"> Add Empty Playlist </button>
+	</a>
+	<a href="/addrandomplaylist">
+		<button class="randPl"> Add Random Playlist </button>
+	</a>
+</div>
 <h1>Playlists</h1>
 {#if isVisible}
 	<div class="btnDiv">
@@ -31,7 +39,7 @@
 			<button class="randPl"> Delete Playlist </button>
 		</a>
 		<a href="/editplaylist">
-			<button class="randPl"> Edit Playlist </button>
+			<button class="randPl" > Edit Playlist </button>
 		</a>
 	</div>
 {:else}
@@ -44,14 +52,7 @@
 	{/each}
 </div>
 
-<div class="btnDiv">
-	<a href="/addemptyplaylist">
-		<button class="randPl"> Add Empty Playlist </button>
-	</a>
-	<a href="/addrandomplaylist">
-		<button class="randPl"> Add Random Playlist </button>
-	</a>
-</div>
+
 
 <style>
 	.plBtn {
