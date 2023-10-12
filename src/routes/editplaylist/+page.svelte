@@ -11,6 +11,16 @@
 		const res = await fetch(URL);
 		pldata = await res.json();
 	});
+	async function delsongfromplaylist(songid) {
+		let URL = 'http://192.168.0.26:8080/delsongfromplaylist/' + $selplaylistid + '/' + songid;
+		console.log(URL);
+		const res = await fetch(URL);
+		let delsong = await res.json();
+		console.log(delsong);
+		const res2 = await fetch(`http://192.168.0.26:8080/allplaylists`);
+		const allpls = await res2.json();
+		allplaylists.set(allpls);
+	}
 </script>
 
 <PlaylistDivComp />
@@ -24,7 +34,7 @@
 		<div class="playlistCard">
 			<div class="playlistItem">
 				<h3>{item.song}</h3>
-				<button>delete</button>
+				<button on:click={delsongfromplaylist(item.rusicid)}><a href="/playlist">delete</a></button>
 			</div>
 		</div>
 	{/each}

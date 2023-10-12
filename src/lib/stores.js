@@ -8,6 +8,7 @@ export const selmediatoplay = writable("None");
 export const selplaylistid = writable("None");
 export const selplaylistname = writable("None");
 export const playlistcount = writable(0);
+export const allplaylists = writable([]);
 
 
 export const nowplayingimgurl = writable(TestPic);

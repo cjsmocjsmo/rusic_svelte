@@ -8,6 +8,10 @@
 		const res = await fetch(URL);
 		const data = await res.json();
 		console.log(data);
+		const res2 = await fetch(`http://192.168.0.26:8080/allplaylists`);
+		const allpls = await res2.json();
+		console.log(allpls);
+		allplaylists.set(allpls);
 	}
 </script>
 

@@ -1,9 +1,16 @@
 <script>
 	import { selplaylistid } from '$lib/stores.js';
 	import { selplaylistname } from '$lib/stores.js';
+	import { allplaylists } from '$lib/stores.js';
+	import { onMount } from 'svelte';
 	import Header from '$lib/components/Header.svelte';
-	export let data;
-	console.log(data.allpls);
+	// export let data;
+
+	onMount(async () => {
+		const res = await fetch(`http://192.168.0.26:8080/allplaylists`);
+		const allpls = await res.json();
+		allplaylists.set(allpls);
+	});
 
 	let isVisible = false;
 	function toggle(rusicid, plname) {
@@ -12,7 +19,8 @@
 		isVisible = true;
 		console.log(rusicid);
 	}
-
+	console.log("this is allplaylist");
+	console.log($allplaylists);
 </script>
 
 <svelte:head>
@@ -39,7 +47,7 @@
 			<button class="randPl"> Delete Playlist </button>
 		</a>
 		<a href="/editplaylist">
-			<button class="randPl" > Edit Playlist </button>
+			<button class="randPl"> Edit Playlist </button>
 		</a>
 	</div>
 {:else}
@@ -47,12 +55,10 @@
 {/if}
 
 <div>
-	{#each data.allpls as pl}
+	{#each $allplaylists as pl}
 		<button class="plBtn" on:click={toggle(pl.rusicid, pl.name)}>{pl.name} {pl.numsongs}</button>
 	{/each}
 </div>
-
-
 
 <style>
 	.plBtn {
