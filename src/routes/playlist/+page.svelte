@@ -19,7 +19,7 @@
 		isVisible = true;
 		console.log(rusicid);
 	}
-	console.log("this is allplaylist");
+	console.log('this is allplaylist');
 	console.log($allplaylists);
 </script>
 
@@ -40,7 +40,7 @@
 <h1>Playlists</h1>
 {#if isVisible}
 	<div class="btnDiv">
-		<a href="">
+		<a href="/playlists">
 			<button class="randPl" on:click={() => (isVisible = false)}> Play Playlist </button>
 		</a>
 		<a href="/deleteplaylist">
