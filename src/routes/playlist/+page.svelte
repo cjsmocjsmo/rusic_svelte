@@ -7,7 +7,7 @@
 	// export let data;
 
 	onMount(async () => {
-		const res = await fetch(`http://192.168.0.26:8080/allplaylists`);
+		const res = await fetch(`http://192.168.0.91:8080/allplaylists`);
 		const allpls = await res.json();
 		allplaylists.set(allpls);
 	});
@@ -21,6 +21,45 @@
 	}
 	console.log('this is allplaylist');
 	console.log($allplaylists);
+
+	// Create an array of objects, each of which contains the URL of an audio file and a track title.
+	const playlist = [
+		{
+			url: 'https://example.com/audio/track1.mp3',
+			title: 'Track 1'
+		},
+		{
+			url: 'https://example.com/audio/track2.mp3',
+			title: 'Track 2'
+		},
+		{
+			url: 'https://example.com/audio/track3.mp3',
+			title: 'Track 3'
+		}
+	];
+
+	function playNextTrack() {
+		// Get the current track index.
+		let currentTrackIndex = playlist.findIndex((track) => track.url === audio.src);
+
+		// Increment the track index to play the next track.
+		currentTrackIndex++;
+
+		// If the track index is greater than the length of the playlist, loop back to the beginning.
+		if (currentTrackIndex >= playlist.length) {
+			currentTrackIndex = 0;
+		}
+
+		// Get the URL of the next track.
+		const nextTrackUrl = playlist[currentTrackIndex].url;
+
+		// Load and play the next track.
+		audio.src = nextTrackUrl;
+		audio.play();
+	}
+
+	// Add event listeners to the audio element to detect when the current track has ended, and then call the function to play the next track.
+	audio.addEventListener('ended', playNextTrack);
 </script>
 
 <svelte:head>

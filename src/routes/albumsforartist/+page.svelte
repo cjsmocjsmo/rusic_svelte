@@ -6,7 +6,7 @@
 
 	let datad = [];
 	onMount(async () => {
-		let URL = 'http://192.168.0.26:8080/albforart/' + $selmedia;
+		let URL = 'http://192.168.0.91:8080/albforart/' + $selmedia;
 		console.log(URL);
 		const res = await fetch(URL);
 		datad = await res.json();
