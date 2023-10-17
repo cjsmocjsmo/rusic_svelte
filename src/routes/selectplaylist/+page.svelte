@@ -5,7 +5,7 @@
 	console.log(data.allpls);
 
     function addSongToPlaylist(playlistid, sname) {
-        let URL = 'http://192.168.0.91:8080/addsongtoplaylist/' + playlistid + '/' + $selsong;
+        let URL = 'http://192.168.0.26:8080/addsongtoplaylist/' + playlistid + '/' + $selsong;
         fetch(URL);
         let msg = "Song " + sname + " has been added to playlist!";
         alert(msg);

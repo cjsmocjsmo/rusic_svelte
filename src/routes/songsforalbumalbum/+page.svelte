@@ -8,7 +8,7 @@
 
 	let songs = [];
 	onMount(async () => {
-		let URL = 'http://192.168.0.91:8080/songsforalbum/' + $selmedia;
+		let URL = 'http://192.168.0.26:8080/songsforalbum/' + $selmedia;
 		console.log(URL);
 		const res = await fetch(URL);
 		songs = await res.json();
@@ -21,7 +21,7 @@
 	}
 
 	async function addToLikes(rusicid) {
-		let URL = 'http://192.168.0.91:8080/addsongtomylikes/' + rusicid;
+		let URL = 'http://192.168.0.26:8080/addsongtomylikes/' + rusicid;
 		const res = await fetch(URL);
 		const answer = await res.json();
 		alert("Song has been added to your likes!")

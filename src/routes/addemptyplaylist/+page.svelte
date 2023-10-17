@@ -4,7 +4,7 @@
 	let answer = '';
 	// submit the form data
 	async function submitemptyplaylist() {
-		const URL = `http://192.168.0.91:8080/createemptyplaylist/` + emptyplaylistname;
+		const URL = `http://192.168.0.26:8080/createemptyplaylist/` + emptyplaylistname;
 		const res = await fetch(URL);
 		answer = await res.json();
 		console.log('this is answer');

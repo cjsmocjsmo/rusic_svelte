@@ -6,7 +6,7 @@
 	let plcount = '';
 	let answer = '';
 	async function submitrandplaylist() {
-		const URL = `http://192.168.0.91:8080/createrandomplaylist/` + randplname + `/` + plcount;
+		const URL = `http://192.168.0.26:8080/createrandomplaylist/` + randplname + `/` + plcount;
 		const res = await fetch(URL);
 		answer = await res.json();
 		console.log('this is answer');
